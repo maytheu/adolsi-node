@@ -1,0 +1,24 @@
+{
+  "name": "adolsi-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "index.d.js",
+  "scripts": {
+    "build": "",
+    "test": "",
+    "test:javascript": "",
+    "test:typescript": ""
+  },
+  "keywords": [],
+  "author": "",
+  "contributors": [
+    "Adetunji Mathew <maytheu98@gmail.com>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0"
+  }
+}
