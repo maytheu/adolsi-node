@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "sourceMap": false,
+    "declaration": true,
+    "types": ["jest", "node"],
+    "outDir": "./dist",
+    "strict": true,
+    "rootDir": "./",
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/tests"]
+}

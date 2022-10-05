@@ -1,16 +1,14 @@
 {
   "name": "adolsi-node",
   "version": "1.0.0",
-  "description": "",
+  "description": "node sdk for adolsi",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
   "unpkg": "dist/index.umd.js",
   "types": "index.d.js",
   "scripts": {
-    "build": "",
-    "test": "",
-    "test:javascript": "",
-    "test:typescript": ""
+    "build": "rm -rf dist && microbundle --tsconfig.json --no-source-map",
+    "test": ""
   },
   "keywords": [],
   "author": "",
@@ -20,5 +18,12 @@
   "license": "MIT",
   "engines": {
     "node": ">=8.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.2",
+    "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
   }
 }
