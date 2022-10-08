@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import axios, { AxiosRequestConfig } from "axios";
+import { Response } from "./types";
 
 type Config = {
   apiKey: string;
@@ -25,10 +26,11 @@ export abstract class Base {
 
   protected async makeRequest<T>(
     endpoint: string,
-    options: RequestOptions
-  ): Promise<T> {
+    options?: RequestOptions
+  ): Promise<Response<T>> {
     const url = `${this.baseUrl}${endpoint}`;
-    let requestBody = options.body;
+    let requestBody = options?.body;
+    const method = options?.httpMethod ?? "get";
 
     const requestHeaders = {
       Accept: "application/json",
@@ -38,9 +40,9 @@ export abstract class Base {
 
     const config = {
       url,
-      method: options.httpMethod,
+      method,
       headers: requestHeaders,
-      data: options.body,
+      data: requestBody,
     };
 
     const req = await axios(config);
